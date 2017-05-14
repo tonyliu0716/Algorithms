@@ -25,6 +25,8 @@ public class DetectCapital520 {
         if (word.length() < 2) return true;
         if (word.toUpperCase().equals(word)) return true;
         if (word.substring(1).toLowerCase().equals(word.substring(1))) return true;
+        int[] nums = new int[]{1, 3,2, 4,8, 6};
+
         return false;
     }
 }
