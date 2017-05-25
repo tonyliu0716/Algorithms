@@ -37,11 +37,11 @@ public class RelativeRanks506 {
                 }
             }
         }
-        String[] strs = new String[nums.length];
+        String[] string = new String[nums.length];
 
 
 
-        return strs;
+        return string;
     }
 
     public static void main(String[] args) {
