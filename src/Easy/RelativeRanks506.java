@@ -16,28 +16,46 @@ package Easy;
 public class RelativeRanks506 {
 
     public String[] findRelativeRanks(int[] nums) {
-        String[] strings = new String[]{"Gold Medal", "Silver Medal", "Bronze Medal"};
-        if(nums.length <= 3) {
-            String[] strs = new String[nums.length];
-            for(int i = 0; i < strs.length; i++) {
-                strs[i] = strings[i];
-            }
-            return strs;
+
+
+        // newNums: [10, 9, 8, 4, 3]  i
+        // nums:    [10, 3, 8, 9, 4]  j
+        // ["Gold Medal","5","Bronze Medal","Silver Medal","4"]
+        int[] newNums = new int[nums.length];
+        for(int i = 0; i < newNums.length; i++) {
+            newNums[i] = nums[i];
         }
 
-        // [10, 3, 8, 9, 4]
-        // ["Gold Medal","5","Bronze Medal","Silver Medal","4"]
-        int[] newNums = nums;
         for(int i = 0; i < newNums.length; i++) {
             for(int j = i; j < newNums.length; j++) {
-                if(newNums[i] > newNums[j]) {
+                if(newNums[i] < newNums[j]) {
                     int temp = newNums[i];
                     newNums[i] = newNums[j];
                     newNums[j] = temp;
                 }
             }
         }
+
         String[] string = new String[nums.length];
+        for(int i = 0; i < newNums.length; i++) {
+            for(int j = 0; j < nums.length; j++) {
+                if(newNums[i] == nums[j]) {
+                    string[j] = i + 1 + "";
+                    if(string[j].equals("1")) {
+                        string[j] = "Gold Medal";
+                    }
+                    if(string[j].equals("2")) {
+                        string[j] = "Silver Medal";
+                    }
+                    if(string[j].equals("3")) {
+                        string[j] = "Bronze Medal";
+                    }
+                    break;
+                }
+
+            }
+        }
+
 
 
 
@@ -45,16 +63,12 @@ public class RelativeRanks506 {
     }
 
     public static void main(String[] args) {
-        int[] nums = new int[]{1, 4, 2, 5, 6, 3};
-        int max = 0;
-        int maxIndex = 0;
-        for(int i = 0; i < nums.length - 1; i++) {
-            if(nums[i] < nums[i + 1]) {
-                max = nums[i + 1];
-                maxIndex = i + 1;
-            }
+        int[] nums = new int[]{1, 2};
+        RelativeRanks506 rank = new RelativeRanks506();
+        String[] strings = rank.findRelativeRanks(nums);
+        for(String s : strings) {
+            System.out.println(s);
         }
-        System.out.println(maxIndex);
 
     }
 }
