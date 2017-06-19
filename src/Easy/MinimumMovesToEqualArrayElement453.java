@@ -45,7 +45,7 @@ public class MinimumMovesToEqualArrayElement453 {
         MinimumMovesToEqualArrayElement453 min = new MinimumMovesToEqualArrayElement453();
         int[] nums = new int[]{1, 2, 3};
         System.out.println( min.minMoves(nums) );
-        
+
 
     }
 
