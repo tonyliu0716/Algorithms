@@ -89,17 +89,86 @@ public class DegreeofanArray697 {
 
     }
 
+    public static int findSubArray2(int[] nums) {
+        if(nums.length == 1) {
+            return 1;
+        }
 
+        Set<Integer> integers = new HashSet<>();
+        HashMap<Integer, Integer> maps = new HashMap<>();
+        List<Integer> maxNums = new ArrayList<>();
+        int maxApperTime = 1;
+
+
+        for(int i = 0; i < nums.length; i++) {
+            integers.add(nums[i]);
+            if(maps.get(nums[i]) == null) {
+                maps.put(nums[i], 1);
+
+            } else {
+                if(maxApperTime < maps.get(nums[i]) + 1) {
+                    maxApperTime = maps.get(nums[i]) + 1;
+                }
+                maps.put(nums[i], maps.get(nums[i]) + 1);
+            }
+        }
+
+        for(Map.Entry<Integer, Integer> entry : maps.entrySet()) {
+            if(entry.getValue() == maxApperTime) {
+                maxNums.add(entry.getKey());
+            }
+        }
+
+        int minDistance = Integer.MAX_VALUE;
+        HashMap<Integer, Integer> distances = minDistance(integers, nums);
+        for(int i = 0; i < maxNums.size(); i++) {
+            if(minDistance > distances.get(maxNums.get(i))) {
+                minDistance = distances.get(maxNums.get(i));
+            }
+        }
+
+        System.out.println("max appear time is " + maxApperTime);
+
+        return minDistance;
+    }
+
+    public static HashMap<Integer, Integer> minDistance(Set<Integer> integers, int[] nums) {
+        HashMap<Integer, Integer> maps = new HashMap<>();
+        for(Integer s : integers) {
+            int firstIndex = 0;
+            int lastIndex = nums.length - 1;
+            for(int j = 0; j < nums.length; j++) {
+                if(nums[j] == s) {
+                    firstIndex = j;
+                    break;
+                }
+            }
+            for(int k = nums.length - 1; k >= 0; k--) {
+                if(nums[k] == s) {
+                    lastIndex = k;
+                    break;
+                }
+            }
+            maps.put(s, lastIndex - firstIndex + 1);
+        }
+
+        for(Map.Entry<Integer, Integer> entry: maps.entrySet()) {
+            System.out.println(entry.getKey() + " : " + entry.getValue() );
+        }
+
+        return maps;
+    }
 
 
     public static void main(String[] args) {
         //int[] nums = {1,1,2,2,2,1};
         //int[] nums = {1, 2, 2, 3, 1};
-        int[] nums = {1,2,2,3,1,4,2};
+        //int[] nums = {1,2,2,3,1,4,2};
 //        int[] nums = {47,47,72,47,72,47,79,47,12,92,13,47,47,83,33,15,18,47,47,47,47,64,47,65,47,47,47,47,70,47,47,55,47,
 //                15,60,47,47,47,47,47,46,30,58,59,47,47,47,47,47,90,64,37,20,47,100,84,47,47,47,47,47,89,47,36,47,60,47,18,
 //                47,34,47,47,47,47,47,22,47,54,30,11,47,47,86,47,55,40,49,34,19,67,16,47,36,47,41,19,80,47,47,27};
-        System.out.println( DegreeofanArray697.findSubArray(nums));
+        int[] nums = {3, 3, 4};
+        System.out.println( DegreeofanArray697.findSubArray2(nums));
 
 
     }
