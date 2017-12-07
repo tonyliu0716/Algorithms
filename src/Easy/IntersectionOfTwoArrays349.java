@@ -1,7 +1,6 @@
 package Easy;
 
-import java.util.ArrayList;
-import java.util.HashSet;
+import java.util.*;
 
 /**
  * Created by tao on 6/19/17.
@@ -17,38 +16,54 @@ import java.util.HashSet;
  *
  */
 public class IntersectionOfTwoArrays349 {
-    public int[] intersection(int[] nums1, int[] nums2) {
-        // we can use two hash set to store the elements
-        HashSet<Integer> set1 = new HashSet<Integer>();
-        HashSet<Integer> intersect = new HashSet<Integer>();
 
-        for(int i = 0; i < nums1.length; i++) {
-            set1.add(nums1[i]);
-        }
+    public static int[] intersection(int[] nums1, int[] nums2) {
+        HashMap<Integer, Integer> map1 = new HashMap<>();
+        HashMap<Integer, Integer> map2 = new HashMap<>();
 
-        for(int i = 0; i < nums2.length; i++) {
-            if(set1.contains(nums2[i])) {
-                intersect.add(nums2[i]);
+        for(int num : nums1) {
+            if(map1.get(num) != null) {
+                map1.put(num, map1.get(num) + 1);
+            } else {
+                map1.put(num, 1);
             }
         }
 
-        int[] result = new int[intersect.size()];
-        int i = 0;
-        for(Integer num : intersect) {
-            result[i++] = num;
+        for(int num : nums2) {
+            if(map2.get(num) != null) {
+                map2.put(num, map2.get(num) + 1);
+            } else {
+                map2.put(num, 1);
+            }
         }
 
-        return result;
+        List<Integer> lists = new ArrayList<>();
+
+        for(Map.Entry<Integer, Integer> entry : map1.entrySet()) {
+            int num = entry.getKey();
+            if(map2.get(num) != null && map1.get(num) == map2.get(num)) {
+                for(int i = 0; i < entry.getValue(); i++) {
+                    lists.add(num);
+                }
+
+            }
+        }
+
+
+
+        int[] nums = new int[lists.size()];
+        for(int i = 0; i < nums.length; i++) {
+            nums[i] = lists.get(i);
+        }
+        return nums;
     }
 
     public static void main(String[] args){
-        IntersectionOfTwoArrays349 array = new IntersectionOfTwoArrays349();
-        int[] nums1 = new int[]{1, 2, 2, 1};
-        int[] nums2 = new int[]{2, 2};
-
-        int[] result = array.intersection(nums1, nums2);
-        for(int num: result) {
-            System.out.println(num);
+        int[] num1 = {1, 2, 2, 1};
+        int[] num2 = {2, 2};
+        int[] arr = IntersectionOfTwoArrays349.intersection(num1, num2);
+        for(int num : arr) {
+            System.out.print(num + " ");
         }
     }
 
