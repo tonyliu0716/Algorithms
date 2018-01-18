@@ -17,20 +17,48 @@ package Easy;
  */
 public class ReverseStringII_541 {
 
-    public String reverseStr(String s, int k) {
-        StringBuffer sb = new StringBuffer();
-        if(s.length() < k) {
+    public static String reverseStr(String s, int k) {
+
+        if(k <= 1) {
             return s;
         }
-        int somek = 0;
-        while(somek * k < s.length()) {
 
-            sb.append( s.substring(somek * k, (somek + 1) * k));
-
+        if(k > s.length()) {
+            return s;
         }
 
+        if(k < s.length() && 2 * k >= s.length()) {
+            return reverseStringSeq(s.substring(0, k)) + s.substring(k, s.length());
+        }
 
-        return null;
+        if(k == s.length()) {
+            return reverseStringSeq(s);
+        }
+
+        StringBuffer sb = new StringBuffer(s);
+        StringBuffer sb1 = new StringBuffer();
+        int length = sb.length();
+        System.out.println("length: " + length);
+        for(int i = 0; i < length; i += 2 * k) {
+
+            int distance = length - i;
+            System.out.println("distance: " + distance + ", i: " + i);
+            if(distance < k) {
+                sb1.append(reverseStringSeq(sb.substring(i, length)));
+                System.out.println("< : " + sb);
+                break;
+            }
+            if(distance < 2 * k && distance >= k) {
+                sb1.append(reverseStringSeq(sb.substring(i, i + k)) + sb.substring(i + k, length));
+                System.out.println("> : " + sb);
+                break;
+            }
+
+            sb1.append(reverseStringSeq(sb.substring(i, i + k)) + sb.substring(i + k, i + 2 * k));
+            System.out.println("= : " + sb1);
+        }
+
+        return sb1.toString();
     }
 
     public static String reverseStringSeq(String s) {
@@ -39,6 +67,12 @@ public class ReverseStringII_541 {
             sb.append(s.charAt(i));
         }
         return sb.toString();
+    }
+
+    public static void main(String[] args) {
+        System.out.println(ReverseStringII_541.reverseStr("abcdefg", 8));
+        //System.out.println(new StringBuffer("abcde").subSequence(0, 1));
+
     }
 
 }
