@@ -32,11 +32,11 @@ import java.util.ArrayList;
  *
  */
 
-class TreeNode {
+class TreeNodeFor653 {
     int val;
-    TreeNode left;
-    TreeNode right;
-    TreeNode(int x) { val = x; }
+    TreeNodeFor653 left;
+    TreeNodeFor653 right;
+    TreeNodeFor653(int x) { val = x; }
 }
 
 public class TwoSumInputisaBST653 {
@@ -45,7 +45,7 @@ public class TwoSumInputisaBST653 {
 
     private ArrayList<Integer> list = new ArrayList<>();
 
-    public boolean findTarget(TreeNode root, int k) {
+    public boolean findTarget(TreeNodeFor653 root, int k) {
         if(root.val == 0 && root.left == null && root.right == null) {
             if(k == 0) {
                 return true;
@@ -75,7 +75,7 @@ public class TwoSumInputisaBST653 {
         }
     }
 
-    public void preorder(TreeNode root) {
+    public void preorder(TreeNodeFor653 root) {
         if(root != null) {
             list.add(root.val);
         }
@@ -89,24 +89,24 @@ public class TwoSumInputisaBST653 {
     }
 
     public static void main(String[] args) {
-        TreeNode node = new TreeNode(5);
-        TreeNode node3 = new TreeNode(3);
-        TreeNode node6 = new TreeNode(6);
+        TreeNodeFor653 node = new TreeNodeFor653(5);
+        TreeNodeFor653 node3 = new TreeNodeFor653(3);
+        TreeNodeFor653 node6 = new TreeNodeFor653(6);
         node.left = node3;
         node.right = node6;
 
-        TreeNode node2 = new TreeNode(2);
-        TreeNode node4 = new TreeNode(4);
+        TreeNodeFor653 node2 = new TreeNodeFor653(2);
+        TreeNodeFor653 node4 = new TreeNodeFor653(4);
 
         node3.left = node2;
         node3.right = node4;
 
-        TreeNode node7 = new TreeNode(7);
+        TreeNodeFor653 node7 = new TreeNodeFor653(7);
 
         node6.right = node7;
 
-        TreeNode root = new TreeNode(2);
-        TreeNode node31 = new TreeNode(3);
+        TreeNodeFor653 root = new TreeNodeFor653(2);
+        TreeNodeFor653 node31 = new TreeNodeFor653(3);
         root.left = node31;
 
         TwoSumInputisaBST653 bst = new TwoSumInputisaBST653();
