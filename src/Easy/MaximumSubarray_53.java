@@ -31,9 +31,7 @@ public class MaximumSubarray_53 {
                 sum += nums[j];
                 max = Math.max(max, sum);
             }
-            if(i == nums.length - 1) {
-                max = Math.max(max, sum);
-            }
+
             sum = 0;
         }
         return max;
@@ -41,7 +39,7 @@ public class MaximumSubarray_53 {
 
     public static void main(String[] args) {
         MaximumSubarray_53 sub = new MaximumSubarray_53();
-        int[] arr = new int[]{-2,1};
+        int[] arr = new int[]{2,-1, -2};
         System.out.println(sub.maxSubArray(arr));
     }
 }
