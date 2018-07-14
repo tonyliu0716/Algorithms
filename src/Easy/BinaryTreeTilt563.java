@@ -1,16 +1,12 @@
 package Easy;
 
+
 /**
  * Created by tonyliu on 5/17/17.
  */
-public class BinaryTreeTilt563 {
 
-    public class TreeNode {
-       int val;
-       TreeNode left;
-       TreeNode right;
-       TreeNode(int x) { val = x; }
-    }
+
+public class BinaryTreeTilt563 {
 
     int result = 0;
 
