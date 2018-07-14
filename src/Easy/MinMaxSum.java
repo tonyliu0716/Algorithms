@@ -15,8 +15,14 @@ public class MinMaxSum {
     // Complete the miniMaxSum function below.
     static void miniMaxSum(int[] arr) {
         Arrays.sort(arr);
-        Long min = Long.parseLong((arr[0] + arr[1] + arr[2] + arr[3]) + "");
-        Long max = Long.parseLong((arr[arr.length - 1] + arr[arr.length - 2] + arr[arr.length - 3] + arr[arr.length - 4]) + "");
+        System.out.println("...we are here...");
+        for(int a : arr) {
+            System.out.print(a + " ");
+        }
+
+        Long min = Long.parseLong(Long.parseLong(arr[0] + "") + Long.parseLong(arr[1] + "") + Long.parseLong(arr[2] + "") + Long.parseLong(arr[3] + "")  + "");
+        Long max = Long.parseLong(Long.parseLong(arr[arr.length - 1] + "") + Long.parseLong(arr[arr.length - 2] + "") + Long.parseLong(arr[arr.length - 3] + "")
+                + Long.parseLong(arr[arr.length - 4] + "") + "");
         System.out.println(min + " " + max);
 
     }
