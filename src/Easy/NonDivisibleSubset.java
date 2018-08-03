@@ -1,5 +1,7 @@
 package Easy;
 
+import java.util.ArrayList;
+
 /**
  * Created by tonyliu on 2018/7/28.
  */
@@ -32,11 +34,16 @@ public class NonDivisibleSubset {
         System.out.println( NonDivisibleSubset.nonDivisibleSubset(9, S) );
 
         System.out.println();
-        StringBuffer sb = new StringBuffer("10111");
-        for(int i = 0; i < sb.length(); i++) {
-            System.out.print(sb.charAt(i));
+        StringBuffer newOne = new StringBuffer();
+        newOne.append("81");
+        System.out.println("newOne is " + newOne);
+        for(int j = 0; j < newOne.length(); j++) {
+            if(9 == Integer.parseInt(newOne.substring(0, j)) + Integer.parseInt(newOne.substring(j, newOne.length()))) {
+                System.out.print(j + " ");
+
+                break;
+            }
         }
-        System.out.println("over");
     }
 
 }
