@@ -23,6 +23,7 @@ public class AlternatingCharacters {
     public static void main(String[] args) {
         System.out.println( AlternatingCharacters.alternatingCharacters("AAABBB") );
 
+
     }
 
 }
