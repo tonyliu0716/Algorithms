@@ -1,6 +1,5 @@
 package Easy;
 
-import java.util.ArrayList;
 
 /**
  * Created by tonyliu on 2018/1/18.
@@ -119,10 +118,10 @@ public class BaseballGame682 {
     }
 
     public static void main(String[] args) {
-        String[] strings = {"5","2","C","D","+"};
+        // String[] strings = {"5","2","C","D","+"};
         BaseballGame682 baseball = new BaseballGame682();
 
-        String[] strings1 = {"5","-2","4","C","D","9","+","+"};
+        // String[] strings1 = {"5","-2","4","C","D","9","+","+"};
 
         String[] strings2 = {"-60","D","-36","30","13","C","C","-33","53","79"};
         System.out.println( "sum is " + baseball.calPoints(strings2) );

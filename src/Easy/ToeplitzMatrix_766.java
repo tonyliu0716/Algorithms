@@ -1,8 +1,5 @@
 package Easy;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Set;
 
 /**
  * Created by tao on 4/10/18.

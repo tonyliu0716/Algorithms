@@ -1,6 +1,5 @@
 package ClassicAlgorithm;
 
-import java.util.Comparator;
 
 /**
  * Created by tonyliu on 6/22/17.

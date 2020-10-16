@@ -1,8 +1,6 @@
 package Easy;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
+
 
 /**
  * Created by tao on 6/20/17.
@@ -62,8 +60,8 @@ public class FirstUniqueCharacterInAString387 {
     }
 
     public static void main(String[] args) {
-        String s1 = "leetcode";
-        String s2 = "loveleetcode";
+        // String s1 = "leetcode";
+        // String s2 = "loveleetcode";
         String s3 = "aadadaad";
 
         FirstUniqueCharacterInAString387 string387 = new FirstUniqueCharacterInAString387();

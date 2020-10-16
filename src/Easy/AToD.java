@@ -1,6 +1,5 @@
 package Easy;
 
-import java.util.HashMap;
 import java.util.Scanner;
 
 /**
@@ -53,6 +52,7 @@ public class AToD {
         Scanner scan = new Scanner(System.in);
         System.out.println("Please enter the message: ");
         String message = scan.nextLine();
+        scan.close();
         System.out.println(doChange(message, 2));
     }
 

@@ -37,7 +37,7 @@ public class StudentAttendanceRecordI551 {
             }
         }
 
-        Boolean flagL = false;
+        //Boolean flagL = false;
 
         for(int i = 0; i < s.length() - 2; i++) {
             if(s.charAt(i) == 'A') {

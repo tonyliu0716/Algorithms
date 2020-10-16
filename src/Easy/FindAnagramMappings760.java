@@ -31,9 +31,9 @@ public class FindAnagramMappings760 {
     public int[] anagramMappings(int[] A, int[] B) {
         ArrayList<Integer> list = new ArrayList<>();
         boolean[] booleans = new boolean[A.length];
-        for(boolean b : booleans) {
-            b = false;
-        }
+        // for(boolean b : booleans) {
+        //     b = false;
+        // }
 
         for(int i = 0; i < A.length; i++) {
             for(int j = 0; j < B.length; j++) {

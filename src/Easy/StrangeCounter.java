@@ -22,7 +22,7 @@ public class StrangeCounter {
 //            }
 //        }
 //        return initial + 1;
-        long orinigal = 3;
+        //long orinigal = 3;
         long length = 3;
         long distance = 1;
         if(distance == t) {

@@ -24,7 +24,7 @@ public class SumOfLeftLeaves404 {
        TreeNode(int x) { val = x; }
    }
 
-   private int sum = 0;
+   //private int sum = 0;
 
    public int sumOfLeftLeaves(TreeNode root) {
 

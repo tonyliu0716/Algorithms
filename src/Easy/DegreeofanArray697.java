@@ -63,7 +63,7 @@ public class DegreeofanArray697 {
 
         int maxApperTime = 0;
         ArrayList<Integer> lists = new ArrayList<>();
-        int maxApperNum = 0;
+        //int maxApperNum = 0;
         for(Map.Entry<Integer, Integer> entry : maxApperMaps.entrySet()) {
             if(maxApperTime < entry.getValue()) {
                 maxApperTime = entry.getValue();

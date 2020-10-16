@@ -1,9 +1,7 @@
 package Easy;
 
-import ClassicAlgorithm.BinaryTree;
-import java.text.DecimalFormat;
+
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 /**

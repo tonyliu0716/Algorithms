@@ -50,7 +50,7 @@ public class SubTreeOfAnotherTree {
 
     public String generatepreorderString(TreeNode s){
         StringBuilder sb = new StringBuilder();
-        Stack<TreeNode> stacktree = new Stack();
+        Stack<TreeNode> stacktree = new Stack<TreeNode>();
         stacktree.push(s);
         while(!stacktree.isEmpty()){
             TreeNode popelem = stacktree.pop();

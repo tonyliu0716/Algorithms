@@ -47,7 +47,7 @@ public class RecursiveAndQueue {
     Map<Integer, Employee> emap;
 
     public int getImportance(List<Employee> employees, int queryid) {
-        emap = new HashMap();
+        emap = new HashMap<Integer, Employee>();
         for (Employee e: employees) emap.put(e.id, e);
         return dfs(queryid);
     }

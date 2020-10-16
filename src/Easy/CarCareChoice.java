@@ -22,6 +22,7 @@ public class CarCareChoice {
         } else {
             System.out.println("Got it.");
         }
+        scan.close();
 
     }
 

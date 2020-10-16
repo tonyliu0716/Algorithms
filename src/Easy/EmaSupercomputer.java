@@ -1,6 +1,6 @@
 package Easy;
 
-import java.math.BigInteger;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -19,10 +19,10 @@ public class EmaSupercomputer {
         int max = 0;
         int cell = 1;
         boolean changed = false;
-        boolean cross = false;
-        int locationOfMax = 0;
-        int start = 0;
-        int end = 0;
+        // boolean cross = false;
+        // int locationOfMax = 0;
+        // int start = 0;
+        // int end = 0;
         for (int i = 0; i < grid.length; i++) {
 
             for (int j = 0; j < grid[i].length(); j++) {
@@ -62,7 +62,7 @@ public class EmaSupercomputer {
 
                     // after the while loop we get the good cells number
                     System.out.println("Location: i -> " + i + ", j -> " + j + ", add -> " + ((cell - 1) * 4 + 1));
-                    int sum = (cell - 1) * 4 + 1;
+                    //int sum = (cell - 1) * 4 + 1;
                     if (changed) {
 
                         //sb.append("|max" + ((cell - 1) * 4 + 1) + "|");

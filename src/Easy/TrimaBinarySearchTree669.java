@@ -1,6 +1,5 @@
 package Easy;
 
-import java.util.ArrayList;
 
 /**
  * Created by tonyliu on 2018/1/19.
@@ -53,7 +52,7 @@ class TreeNodeFor669 {
 
 public class TrimaBinarySearchTree669 {
 
-    private ArrayList<Integer> list = new ArrayList<>();
+    //private ArrayList<Integer> list = new ArrayList<>();
 
     public TreeNodeFor669 trimBST(TreeNodeFor669 root, int L, int R) {
         if (root == null) return root;

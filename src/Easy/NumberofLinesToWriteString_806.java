@@ -1,6 +1,5 @@
 package Easy;
 
-import java.util.HashMap;
 
 /**
  * Created by tao on 5/11/18.
