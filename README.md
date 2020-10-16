@@ -1,1 +1,1 @@
-# Algorithms - LeetCodes
+# Algorithms - LeetCodes and HackerRank.
