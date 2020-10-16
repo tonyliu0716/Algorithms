@@ -26,8 +26,8 @@ public class IsPrime {
     }
 
     public static void main(String[] args) {
-        IsPrime number = new IsPrime();
-        System.out.println( number.isPrime(147) );
+        
+        System.out.println( IsPrime.isPrime(147) );
 
     }
 }

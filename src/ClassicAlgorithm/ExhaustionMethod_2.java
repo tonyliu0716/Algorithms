@@ -21,8 +21,8 @@ public class ExhaustionMethod_2 {
     }
 
     public static void main(String[] args) {
-        ExhaustionMethod_2 ex = new ExhaustionMethod_2();
-        ex.exhaustion(35, 94);
+        //ExhaustionMethod_2 ex = new ExhaustionMethod_2();
+        ExhaustionMethod_2.exhaustion(35, 94);
     }
 
 }

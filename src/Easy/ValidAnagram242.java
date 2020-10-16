@@ -81,8 +81,8 @@ public class ValidAnagram242 {
 
     public static void main(String[] args) {
         ValidAnagram242 anagram242 = new ValidAnagram242();
-        String s1 = "anagram";
-        String s2 = "nagaram";
+        // String s1 = "anagram";
+        // String s2 = "nagaram";
 
         String s3 = "rat";
         String s4 = "car";

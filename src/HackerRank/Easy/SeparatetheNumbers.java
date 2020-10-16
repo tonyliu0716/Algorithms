@@ -1,7 +1,6 @@
 package HackerRank.Easy;
 
 import java.math.BigInteger;
-import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
@@ -18,8 +17,8 @@ public class SeparatetheNumbers {
         boolean flag = false;
         int length = 0;
         BigInteger one = new BigInteger("1");
-        int first = 0;
-        ArrayList<Integer> list = new ArrayList<Integer>();
+        //int first = 0;
+        //ArrayList<Integer> list = new ArrayList<Integer>();
         HashMap<String, Integer> maps = new HashMap<>();
         for(int i = 1; i <= s.length() / 2; i++) {
             length = s.substring(0, i).length();

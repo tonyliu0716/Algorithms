@@ -23,7 +23,7 @@ public class Queen_s_Attack_II {
     * */
     static int queensAttack(int n, int k, int r_q, int c_q, int[][] obstacles) {
         // how many points should have if no obstacles
-        int totalPoints = 0;
+        
 
         // r_q  col - 1, r_q  col - 2, r_q col - 3 stop r_q  col + 1, r_q  col + 2, r_q  col + 3 -->   9 to 3
         // r_q - 1  col - 1,  r_q - 2, col - 2, stop  r_q + 1  col + 1, r_q + 2  col + 2     --> 7 to 1

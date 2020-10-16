@@ -96,7 +96,7 @@ public class WeightedUniformStrings {
     // Complete the weightedUniformStrings function below.
     static String[] weightedUniformStrings3(String s, int[] queries) {
         String abc = "abcdefghijklmnopqrstuvwxyz";
-        ArrayList<Integer> weight = new ArrayList<Integer>();
+        //ArrayList<Integer> weight = new ArrayList<Integer>();
         HashMap<Character, Integer> maps = new HashMap<Character, Integer>();
         int showTimes = 1;
         int value = 0;

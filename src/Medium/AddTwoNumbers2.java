@@ -1,7 +1,5 @@
 package Medium;
 
-import java.math.BigInteger;
-import java.util.List;
 
 /**
  * Created by tonyliu on 2017/12/4.

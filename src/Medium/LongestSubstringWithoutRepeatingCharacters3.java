@@ -2,7 +2,6 @@ package Medium;
 
 import java.util.*;
 
-import static com.sun.tools.doclint.Entity.lambda;
 
 /**
  * Created by tonyliu on 2017/12/5.

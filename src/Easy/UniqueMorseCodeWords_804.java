@@ -53,8 +53,8 @@ public class UniqueMorseCodeWords_804 {
             for(int j  = 0; j < words[i].length(); j++) {
                 sb.append(letterMaps.get(words[i].charAt(j) + ""));
             }
-            if(maps.get(sb) != null) {
-                maps.put(sb + "", maps.get(sb) + 1);
+            if(maps.get(sb.toString()) != null) {
+                maps.put(sb + "", maps.get(sb.toString()) + 1);
             } else {
                 maps.put(sb + "", 1);
             }
