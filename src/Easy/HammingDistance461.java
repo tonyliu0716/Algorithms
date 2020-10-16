@@ -8,7 +8,7 @@ public class HammingDistance461 {
     public int hammingDistance(int x, int y) {
 
         byte[] bytesx = new byte[4];
-        byte[] bytesy = new byte[4];
+        //byte[] bytesy = new byte[4];
 
         for(int i = 0; i < 4; i++) {
             bytesx[i] = (byte)(x >>> (i * 8));

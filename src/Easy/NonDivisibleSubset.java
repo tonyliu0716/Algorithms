@@ -1,6 +1,5 @@
 package Easy;
 
-import java.util.ArrayList;
 
 /**
  * Created by tonyliu on 2018/7/28.
