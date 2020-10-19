@@ -54,25 +54,21 @@ public class TwoSumInputisaBST653 {
             }
         }
 
-        if(root != null) {
-            preorder(root);
-            for(int i = 0; i < list.size(); i++) {
-                for(int j = 1; j < list.size(); j++) {
-                    if(list.get(i) == list.get(j)) {
-                        continue;
-                    }
-                    if(list.get(i) == null || list.get(j) == null) {
-                        continue;
-                    }
-                    if(list.get(i) + list.get(j) == k) {
-                        return true;
-                    }
+        preorder(root);
+        for (int i = 0; i < list.size(); i++) {
+            for (int j = 1; j < list.size(); j++) {
+                if (list.get(i) == list.get(j)) {
+                    continue;
+                }
+                if (list.get(i) == null || list.get(j) == null) {
+                    continue;
+                }
+                if (list.get(i) + list.get(j) == k) {
+                    return true;
                 }
             }
-            return false;
-        } else {
-            return false;
         }
+        return false;
     }
 
     public void preorder(TreeNodeFor653 root) {

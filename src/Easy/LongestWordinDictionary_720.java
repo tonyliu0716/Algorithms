@@ -53,7 +53,7 @@ public class LongestWordinDictionary_720 {
             }
         }
 
-        int max = validString.get(0).length();
+        //int max = validString.get(0).length();
         for(String s: validString) {
            System.out.print(s + " ");
         }

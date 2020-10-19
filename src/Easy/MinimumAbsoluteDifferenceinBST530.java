@@ -34,7 +34,7 @@ public class MinimumAbsoluteDifferenceinBST530 {
     }
     public int getMinimumDifference(TreeNode root) {
         // get all element and push it to a arraylist
-        ArrayList<Integer> lists = new ArrayList<Integer>();
+        //ArrayList<Integer> lists = new ArrayList<Integer>();
 
 
         return 0;
