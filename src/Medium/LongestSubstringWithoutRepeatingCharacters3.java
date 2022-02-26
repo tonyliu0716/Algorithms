@@ -22,45 +22,17 @@ public class LongestSubstringWithoutRepeatingCharacters3 {
 
     public static int lengthOfLongestSubstring(String s) {
 
-        if(s.length() == 0 || s.length() == 1) {
-            return s.length();
-        }
-
-        if(s.length() == 2 ) {
-            if(s.charAt(0) == s.charAt(1)) {
-                return s.length() - 1;
-            } else {
-                return s.length();
-            }
-        }
-
-        Set<Character> set = new HashSet<>();
-        for(int i = 0; i < s.length(); i++) {
-            set.add(s.charAt(i));
-        }
-        Object[] arr = set.toArray();
-
-
-        List<String> list = combination(arr);
-
-
-        // testing
-        for(String sb : list) {
-            System.out.println(sb);
-        }
-
-        System.out.println("------------");
+        ArrayList<Character> ar = new ArrayList<>();
         int max = 0;
-        for(int i = 0; i < list.size(); i++) {
-            if(s.contains(list.get(i))) {
 
-                if(max < list.get(i).length()) {
-                    max = list.get(i).length();
-                    System.out.println(list.get(i) + " : " + max);
-                }
+        for(int i = 0;i < s.length();i++){
+            while(ar.contains(s.charAt(i))){
+                ar.remove(0);
             }
-        }
+            ar.add(s.charAt(i));
 
+            max = Math.max(max, ar.size());
+        }
         return max;
     }
 
@@ -73,7 +45,7 @@ public class LongestSubstringWithoutRepeatingCharacters3 {
         int all = arr.length;
         int nbit = 1 << all;
         for (int i = 0; i < nbit; i++) {
-            StringBuffer sb = new StringBuffer();
+            StringBuilder sb = new StringBuilder();
             for (int j = 0; j < all; j++) {
                 if ((i & (1 << j)) != 0) {
                     sb.append(arr[j]);
