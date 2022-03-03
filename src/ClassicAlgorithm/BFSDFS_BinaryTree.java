@@ -43,9 +43,9 @@ public class BFSDFS_BinaryTree {
     }
 
     /**
-     * 深度优先遍历，相当于先根遍历
+     * 深度优先遍历，相当于先根遍历 depth first search
      * 采用非递归实现
-     * 需要辅助数据结构：栈
+     * 需要辅助数据结构：栈 -> first in last out
      */
 
     public void depthOrderTraversal(){
@@ -69,9 +69,9 @@ public class BFSDFS_BinaryTree {
     }
 
     /**
-     * 广度优先遍历
+     * 广度优先遍历  breadth first search
      * 采用非递归实现
-     * 需要辅助数据结构：队列
+     * 需要辅助数据结构：队列 -> first in first out
      */
     public void levelOrderTraversal(){
         if(root==null){
@@ -89,6 +89,7 @@ public class BFSDFS_BinaryTree {
             if(node.right!=null){
                 queue.add(node.right);
             }
+
         }
         System.out.print("\n");
     }
